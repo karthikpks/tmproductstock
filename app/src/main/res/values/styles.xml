@@ -12,7 +12,31 @@
         <item name="android:background">@drawable/background_splash</item>
     </style>
 
-    <style name="TMPSActivity" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="NoActionBarActivity" parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
+
+    <style name="ActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:background">@drawable/background_activity</item>
+    </style>
+
+    <style name="EditTextTheme" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:textColorHint">@color/colorHintText</item>
+        <item name="colorControlNormal">@color/colorDivider</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+    </style>
+
+    <style name="ButtonTheme"   parent="Base.Widget.AppCompat.Button">
+        <item name="background">@color/colorPrimaryText</item>
+    </style>
+
+    <style name="TextViewTheme" parent="android:TextAppearance.Holo.Widget.TextView">
+        <item name="android:textColor">@color/text_view_color_state</item>
+    </style>
+
+    <style name="DialogUpBottomAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_bottom</item>
     </style>
 </resources>
