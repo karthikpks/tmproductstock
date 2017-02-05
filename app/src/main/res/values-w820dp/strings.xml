@@ -2,4 +2,7 @@
 <resources>
     <string name="tmps_sign_in">Sign In</string>
     <string name="tmps_sign_up">Sign Up</string>
+    <string name="tmps_username">Email Id / Mobile no.</string>
+    <string name="tmps_password">Password</string>
+    <string name="tmps_forgot_password">Forgot Password?</string>
 </resources>
