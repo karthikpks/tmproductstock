@@ -1,6 +1,7 @@
 package com.tripperme.tmpstock;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
@@ -11,7 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.tripperme.tmpstock.tmpstock.R;
+import com.tripperme.tmpstock.ui.tabs.TripperMeProductStockTabsActivity;
 
 public class TripperMeProductStockActivity extends AppCompatActivity {
 
@@ -103,9 +104,14 @@ public class TripperMeProductStockActivity extends AppCompatActivity {
         tmpsSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                switchToTabs();
             }
         });
+    }
+
+    private void switchToTabs() {
+        Intent intent = new Intent(TripperMeProductStockActivity.this, TripperMeProductStockTabsActivity.class);
+        startActivity(intent);
     }
 
     private void signUpBtnClickListener() {

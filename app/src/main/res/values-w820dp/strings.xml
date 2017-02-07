@@ -5,4 +5,5 @@
     <string name="tmps_username">Email Id / Mobile no.</string>
     <string name="tmps_password">Password</string>
     <string name="tmps_forgot_password">Forgot Password?</string>
+    <string name="action_search">Search</string>
 </resources>
