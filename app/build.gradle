@@ -1,10 +1,12 @@
 apply plugin: 'com.android.application'
 
+def final appName = "TMPStock";
+def final tripperMeProductStockId = "com.tripperme.tmpstock";
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.1"
     defaultConfig {
-        applicationId "com.tripperme.tmpstock"
+        applicationId tripperMeProductStockId
         minSdkVersion 19
         targetSdkVersion 25
         versionCode 1
@@ -16,6 +18,32 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        DEV {
+            applicationId = tripperMeProductStockId + ".dev"
+            buildConfigField('String', 'PARSE_APP_ID', "\"VzsxpWGqNqWeQagdQNKCTyIUv63ZEiSUVRDyt1w2\"")
+            buildConfigField('String', 'PARSE_CLIENT_ID', "\"e6hjegfE1k5DmpWFV6TjkyCelUp8ZdZjefVJTYzX\"")
+            buildConfigField('String', 'PARSE_SERVER', "\"https://parseapi.back4app.com/\"")
+            resValue "string", "app_name", appName + " DEV"
+        }
+
+        QA {
+            applicationId = tripperMeProductStockId + ".qa"
+            buildConfigField('String', 'PARSE_APP_ID', "\"SVOXGoTIbz0lyBeFVzx2Iiu45Ek3b5G0pwmErp9l\"")
+            buildConfigField('String', 'PARSE_CLIENT_ID', "\"rMWSGKWBqGQRiZtu0E83Fcw0eR1e7JcjPbtmYYCC\"")
+            buildConfigField('String', 'PARSE_SERVER', "\"https://parseapi.back4app.com/\"")
+            resValue "string", "app_name", appName + " QA"
+        }
+
+        PROD {
+            applicationId = tripperMeProductStockId
+            buildConfigField('String', 'PARSE_APP_ID', "\"VzsxpWGqNqWeQagdQNKCTyIUv63ZEiSUVRDyt1w2\"")
+            buildConfigField('String', 'PARSE_CLIENT_ID', "\"e6hjegfE1k5DmpWFV6TjkyCelUp8ZdZjefVJTYzX\"")
+            buildConfigField('String', 'PARSE_SERVER', "\"https://parseapi.back4app.com/\"")
+            resValue "string", "app_name", appName + " PROD"
         }
     }
 }
