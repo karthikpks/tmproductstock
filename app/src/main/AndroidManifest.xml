@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.tripperme.tmpstock.tmpstock">
+    package="com.tripperme.tmpstock">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name="com.tripperme.tmpstock.TripperMeProductStockApplication"
@@ -14,15 +17,17 @@
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.tripperme.tmpstock.TripperMeProductStockActivity"
-            android:theme="@style/NoActionBarActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"></activity>
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/NoActionBarActivity" />
+        <activity
+            android:name="com.tripperme.tmpstock.ui.tabs.TripperMeProductStockTabsActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"></activity>
     </application>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+
 </manifest>
